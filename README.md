@@ -150,8 +150,36 @@ Deploy to Vercel for optimal performance:
 
 1. Push your code to GitHub
 2. Import repository in [Vercel](https://vercel.com)
-3. Configure environment variables
+3. Configure environment variables (see below)
 4. Deploy
+
+### Environment Variables for Vercel
+
+In your Vercel project settings, add these environment variables:
+
+**Required:**
+- `OPENAI_API_KEY` - Your OpenAI API key for the chatbot functionality
+
+**Optional (for full feature experience):**
+- `LINKEDIN_CLIENT_ID` - LinkedIn OAuth client ID
+- `LINKEDIN_CLIENT_SECRET` - LinkedIn OAuth client secret
+- `LINKEDIN_REFRESH_TOKEN` - LinkedIn refresh token
+- `TWITTER_API_KEY` - Twitter API key
+- `TWITTER_API_SECRET` - Twitter API secret
+- `TWITTER_ACCESS_TOKEN` - Twitter access token
+- `TWITTER_ACCESS_SECRET` - Twitter access secret
+- `GOOGLE_SEARCH_API_KEY` - Google Custom Search API key
+- `GOOGLE_SEARCH_CX` - Google Custom Search Engine ID
+
+### Vercel Analytics
+
+This project includes [Vercel Analytics](https://vercel.com/analytics) for monitoring traffic and user behavior. Analytics automatically tracks:
+- Page views and unique visitors
+- Browser and device information
+- Geographic distribution
+- Referral sources
+
+Analytics is enabled by default on all Vercel deployments. View your analytics data in the Vercel dashboard under the "Analytics" tab.
 
 The OG image generation uses Vercel's Edge runtime for sub-second response times.
 

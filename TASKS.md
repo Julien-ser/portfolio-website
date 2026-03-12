@@ -32,5 +32,5 @@
  - [x] Add terminal visual effects: CRT scanlines, phosphor glow, typing animation for command output using CSS animations
  - [x] Create responsive design with Tailwind breakpoints, ensure terminal fits mobile screens using `xterm-addon-fit`
  - [x] Write Jest unit tests for command parser (50%+ coverage) and E2E tests with Playwright for terminal interactions
-- [x] Add dynamic Open Graph images generation using `@vercel/og` for social sharing of portfolio projects
-- [ ] Deploy to Vercel with proper environment variable configuration and monitor with Vercel Analytics
+ - [x] Add dynamic Open Graph images generation using `@vercel/og` for social sharing of portfolio projects
+ - [x] Deploy to Vercel with proper environment variable configuration and monitor with Vercel Analytics
