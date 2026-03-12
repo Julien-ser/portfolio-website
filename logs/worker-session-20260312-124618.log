@@ -452,3 +452,60 @@ Let me start by exploring the codebase to understand the current structure and i
 [0m→ [0mRead jest.config.js
 📝 Log saved: logs/iteration-50.md
 📊 Token Usage: 2750 / Session: 12000 / 64000
+✅ Changes committed
+To github.com:Julien-ser/portfolio-website.git
+   bb9f667..762cbd2  main -> main
+✅ Pushed to GitHub
+📊 Updated Tasks: 17/20 completed, 3 remaining
+   Next task: Write Jest unit tests for command parser (50%+ coverage) and...
+📍 Iteration 51 at Thu Mar 12 12:52:30 PM EDT 2026...
+🤖 OpenCode processing: Write Jest unit tests for command parser (50%+ coverage) and E2E tests with Playwright for terminal interactions
+[0m
+> build · stepfun/step-3.5-flash:free
+[0m
+I'll complete the testing task by writing Jest unit tests for the command parser and E2E tests with Playwright for terminal interactions. Let me first explore the codebase to understand the current structure and then implement the tests.
+[0m→ [0mRead package.json
+[0m✱ [0mGlob "**/*.ts"[90m 25 matches[0m
+[0m✱ [0mGlob "**/*.tsx"[90m 11 matches[0m
+[0m→ [0mRead lib/terminal/trie.ts
+[0m→ [0mRead lib/terminal/parser.ts
+[0m→ [0mRead lib/terminal/history.ts
+[0m→ [0mRead lib/terminal/sh-handler.ts
+Let me check the Jest configuration and existing test patterns:
+[0m→ [0mRead __tests__/trie.test.ts
+[0m
+[0m$ [0mls -la /home/julien/Desktop/Free-Wiggum-opencode/projects/portfolio-website
+total 608
+drwxr-xr-x  12 julien julien   4096 Mar 12 12:44 .
+drwxr-xr-x   5 julien julien   4096 Mar 12 12:47 ..
+drwxr-xr-x   3 julien julien   4096 Mar 12 10:54 app
+drwxr-xr-x   5 julien julien   4096 Mar 12 10:49 components
+drwxr-xr-x   2 julien julien   4096 Mar 12 12:08 data
+-rw-r--r--   1 julien julien    215 Mar 12 10:16 .env
+drwxr-xr-x   7 julien julien   4096 Mar 12 12:52 .git
+-rw-r--r--   1 julien julien    450 Mar 12 12:42 .gitignore
+-rw-r--r--   1 julien julien    396 Mar 12 11:41 jest.config.js
+drwxr-xr-x   6 julien julien   4096 Mar 12 11:42 lib
+drwxr-xr-x   2 julien julien   4096 Mar 12 12:52 logs
+-rw-r--r--   1 julien julien    388 Mar 12 11:42 next.config.mjs
+-rw-r--r--   1 julien julien    200 Mar 12 10:20 next-env.d.ts
+drwxr-xr-x 285 julien julien  12288 Mar 12 12:08 node_modules
+-rw-r--r--   1 julien julien   1498 Mar 12 12:08 package.json
+-rw-r--r--   1 julien julien 255160 Mar 12 12:08 package-lock.json
+-rw-r--r--   1 julien julien     80 Mar 12 10:19 postcss.config.mjs
+-rw-r--r--   1 julien julien   1280 Mar 12 10:16 prompt.txt
+drwxr-xr-x   2 julien julien   4096 Mar 12 10:18 public
+-rw-r--r--   1 julien julien    845 Mar 12 10:16 README.md
+-rw-r--r--   1 julien julien    541 Mar 12 10:19 tailwind.config.ts
+-rw-r--r--   1 julien julien   3764 Mar 12 12:50 TASKS.md
+-rw-r--r--   1 julien julien   3738 Mar 12 10:16 TASKS_original.md
+drwxr-xr-x   2 julien julien   4096 Mar 12 11:51 __tests__
+-rw-r--r--   1 julien julien    597 Mar 12 10:19 tsconfig.json
+-rw-r--r--   1 julien julien 252027 Mar 12 12:51 tsconfig.tsbuildinfo
+drwxr-xr-x   2 julien julien   4096 Mar 12 11:20 types
+[0m
+[0m→ [0mRead jest.config.js
+[0m→ [0mRead __tests__/linkedin.test.ts
+[0m→ [0mRead __tests__/twitter.test.ts
+📝 Log saved: logs/iteration-51.md
+📊 Token Usage: 3000 / Session: 15000 / 64000
