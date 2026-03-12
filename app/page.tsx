@@ -119,23 +119,23 @@ Processes (launch with 'run <process>.exe'):
 
   return (
     <div className="min-h-screen bg-black text-green-500 font-mono relative overflow-hidden">
-      {/* Terminal at bottom */}
-      <div className="absolute bottom-0 left-0 right-0 h-96 border-t border-green-900/50">
+      {/* Window renderer for popup windows */}
+      <div className="absolute inset-0 pointer-events-none pb-[40vh] md:pb-96 overflow-hidden">
+        <div className="pointer-events-auto h-full">
+          <WindowRenderer />
+        </div>
+      </div>
+
+      {/* Terminal at bottom - responsive height */}
+      <div className="absolute bottom-0 left-0 right-0 h-[40vh] md:h-96 border-t border-green-900/50 z-10">
         <XTerminal 
           prompt="$ " 
           onCommand={handleCommand}
         />
       </div>
 
-      {/* Window renderer for popup windows */}
-      <div className="absolute inset-0 pointer-events-none" style={{ paddingBottom: '384px' }}>
-        <div className="pointer-events-auto">
-          <WindowRenderer />
-        </div>
-      </div>
-
       {/* Welcome message overlay (shows initially, can be dismissed) */}
-      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-0 z-0">
         <div className="text-center">
           <h1 className="text-4xl font-bold mb-4 text-green-400">Julien Serbanescu</h1>
           <p className="text-xl text-gray-400">Full-Stack Developer & Problem Solver</p>

@@ -30,7 +30,7 @@
 - [x] Add Y Combinator company profile scraper using `puppeteer` or `playwright` to search "Julien Serbanescu YC" (fallback: hardcoded data)
 - [x] Implement Google Custom Search API client in `lib/api/search.ts` as secondary web search option with rate limiting
  - [x] Add terminal visual effects: CRT scanlines, phosphor glow, typing animation for command output using CSS animations
-- [ ] Create responsive design with Tailwind breakpoints, ensure terminal fits mobile screens using `xterm-addon-fit`
+ - [x] Create responsive design with Tailwind breakpoints, ensure terminal fits mobile screens using `xterm-addon-fit`
 - [ ] Write Jest unit tests for command parser (50%+ coverage) and E2E tests with Playwright for terminal interactions
 - [ ] Add dynamic Open Graph images generation using `@vercel/og` for social sharing of portfolio projects
 - [ ] Deploy to Vercel with proper environment variable configuration and monitor with Vercel Analytics

@@ -9,6 +9,10 @@
   flex-direction: column;
   min-width: 400px;
   min-height: 300px;
+  /* Responsive constraints for mobile */
+  max-width: 90vw;
+  max-height: 80vh;
+  box-sizing: border-box;
 }
 
 .process-window.active {
