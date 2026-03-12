@@ -426,3 +426,29 @@ To github.com:Julien-ser/portfolio-website.git
 Task completed.
 📝 Log saved: logs/iteration-49.md
 📊 Token Usage: 5000 / Session: 9250 / 64000
+✅ Changes committed
+To github.com:Julien-ser/portfolio-website.git
+   5099bb5..bb9f667  main -> main
+✅ Pushed to GitHub
+📊 Updated Tasks: 17/20 completed, 3 remaining
+   Next task: Write Jest unit tests for command parser (50%+ coverage) and...
+📍 Iteration 50 at Thu Mar 12 12:51:49 PM EDT 2026...
+🤖 OpenCode processing: Write Jest unit tests for command parser (50%+ coverage) and E2E tests with Playwright for terminal interactions
+[0m
+> build · stepfun/step-3.5-flash:free
+[0m
+I'll help you complete the testing task by writing Jest unit tests for the command parser and Playwright E2E tests for terminal interactions.
+
+Let me start by exploring the codebase to understand the current structure and identify where to add tests.
+[0m✱ [0mGlob "**/*.tsx"[90m 11 matches[0m
+[0m✱ [0mGlob "**/*.ts"[90m 25 matches[0m
+[0m✱ [0mGlob "**/package.json"[90m 1 match[0m
+[0m→ [0mRead package.json
+[0m→ [0mRead lib/terminal/parser.ts
+[0m→ [0mRead lib/terminal/history.ts
+[0m→ [0mRead lib/terminal/trie.ts
+[0m→ [0mRead __tests__/trie.test.ts
+[0m✱ [0mGlob "jest.config.*"[90m 1 match[0m
+[0m→ [0mRead jest.config.js
+📝 Log saved: logs/iteration-50.md
+📊 Token Usage: 2750 / Session: 12000 / 64000
