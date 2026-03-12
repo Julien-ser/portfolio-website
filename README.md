@@ -8,12 +8,21 @@ Each project:
 - Runs its own autonomous OpenCode agent loop
 - Tracks progress in TASKS.md
 
+
 ## Setup
 
-1. Create: `bash wiggum_master.sh create "my-project" "Description"`
-2. View: `cat projects/my-project/README.md`
-3. Initialize: `cd projects/my-project && opencode /init --yes`
-4. Run: `cd projects/my-project && bash wiggum.sh`
+```bash
+cd /home/julien/Desktop/Free-Wiggum-opencode/projects/portfolio-website
+npm install  # or your package manager
+```
+
+## Usage
+
+Refer to the tasks and commits for the latest implementation details.
+
+**Last updated:** Thu Mar 12 12:54:56 PM EDT 2026
+**Iteration:** 53 /  tasks
+
 
 ## Files
 
