@@ -509,3 +509,94 @@ drwxr-xr-x   2 julien julien   4096 Mar 12 11:20 types
 [0m→ [0mRead __tests__/twitter.test.ts
 📝 Log saved: logs/iteration-51.md
 📊 Token Usage: 3000 / Session: 15000 / 64000
+✅ Changes committed
+To github.com:Julien-ser/portfolio-website.git
+   762cbd2..af2c8a4  main -> main
+✅ Pushed to GitHub
+📊 Updated Tasks: 17/20 completed, 3 remaining
+   Next task: Write Jest unit tests for command parser (50%+ coverage) and...
+📍 Iteration 52 at Thu Mar 12 12:53:14 PM EDT 2026...
+🤖 OpenCode processing: Write Jest unit tests for command parser (50%+ coverage) and E2E tests with Playwright for terminal interactions
+[0m
+> build · stepfun/step-3.5-flash:free
+[0m
+I'll start by exploring the codebase to understand the command parser and terminal interactions, then write comprehensive tests.
+[0m✱ [0mGlob "**/*parser*.{ts,tsx,js,jsx}"[90m 1 match[0m
+[0m✱ [0mGlob "**/*terminal*.{ts,tsx,js,jsx}"[90m 0 matches[0m
+[0m✱ [0mGlob "**/components/**/*.tsx"[90m 7 matches[0m
+[0m→ [0mRead TASKS.md
+Let me read the parser and terminal component to understand the command structure:
+[0m→ [0mRead lib/terminal/parser.ts
+[0m→ [0mRead components/terminal/Terminal.tsx
+[0m→ [0mRead package.json
+Let me check for existing test files and configuration:
+[0m→ [0mRead lib/terminal/trie.ts
+[0m✱ [0mGlob "**/*.{test,spec}.{ts,tsx,js,jsx}"[90m 3 matches[0m
+[0m✱ [0mGlob "jest.config.*"[90m 1 match[0m
+[0m→ [0mRead jest.config.js
+[0m→ [0mRead __tests__/trie.test.ts
+[0m
+[0m# [0mTodos
+[ ] Write comprehensive Jest unit tests for command parser in __tests__/parser.test.ts
+[ ] Create E2E tests with Playwright for terminal interactions in __tests__/terminal.e2e.test.ts
+[ ] Update jest.config.js to support both unit and E2E tests
+[ ] Run tests and verify 50%+ coverage for parser
+[ ] Update TASKS.md marking testing task as complete
+[0m
+Now I'll write comprehensive unit tests for the command parser and E2E tests with Playwright. Let me create the parser test file first:
+[0m← [0mWrite __tests__/parser.test.ts
+Wrote file successfully.
+[0m
+[0m# [0mTodos
+[x] Write comprehensive Jest unit tests for command parser in __tests__/parser.test.ts
+[ ] Create E2E tests with Playwright for terminal interactions in __tests__/terminal.e2e.test.ts
+[ ] Update jest.config.js to support both unit and E2E tests
+[ ] Run tests and verify 50%+ coverage for parser
+[ ] Update TASKS.md marking testing task as complete
+[0m
+[0m✱ [0mGlob "playwright.config.*"[90m 0 matches[0m
+[0m
+[0m$ [0mls -la
+total 608
+drwxr-xr-x  12 julien julien   4096 Mar 12 12:44 .
+drwxr-xr-x   5 julien julien   4096 Mar 12 12:47 ..
+drwxr-xr-x   3 julien julien   4096 Mar 12 10:54 app
+drwxr-xr-x   5 julien julien   4096 Mar 12 10:49 components
+drwxr-xr-x   2 julien julien   4096 Mar 12 12:08 data
+-rw-r--r--   1 julien julien    215 Mar 12 10:16 .env
+drwxr-xr-x   7 julien julien   4096 Mar 12 12:53 .git
+-rw-r--r--   1 julien julien    450 Mar 12 12:42 .gitignore
+-rw-r--r--   1 julien julien    396 Mar 12 11:41 jest.config.js
+drwxr-xr-x   6 julien julien   4096 Mar 12 11:42 lib
+drwxr-xr-x   2 julien julien   4096 Mar 12 12:53 logs
+-rw-r--r--   1 julien julien    388 Mar 12 11:42 next.config.mjs
+-rw-r--r--   1 julien julien    200 Mar 12 10:20 next-env.d.ts
+drwxr-xr-x 285 julien julien  12288 Mar 12 12:08 node_modules
+-rw-r--r--   1 julien julien   1498 Mar 12 12:08 package.json
+-rw-r--r--   1 julien julien 255160 Mar 12 12:08 package-lock.json
+-rw-r--r--   1 julien julien     80 Mar 12 10:19 postcss.config.mjs
+-rw-r--r--   1 julien julien   1280 Mar 12 10:16 prompt.txt
+drwxr-xr-x   2 julien julien   4096 Mar 12 10:18 public
+-rw-r--r--   1 julien julien    845 Mar 12 10:16 README.md
+-rw-r--r--   1 julien julien    541 Mar 12 10:19 tailwind.config.ts
+-rw-r--r--   1 julien julien   3764 Mar 12 12:50 TASKS.md
+-rw-r--r--   1 julien julien   3738 Mar 12 10:16 TASKS_original.md
+drwxr-xr-x   2 julien julien   4096 Mar 12 12:54 __tests__
+-rw-r--r--   1 julien julien    597 Mar 12 10:19 tsconfig.json
+-rw-r--r--   1 julien julien 252027 Mar 12 12:51 tsconfig.tsbuildinfo
+drwxr-xr-x   2 julien julien   4096 Mar 12 11:20 types
+[0m
+Now let me create E2E tests with Playwright. First, let me check if there's any existing Playwright configuration:
+I need to install @playwright/test and create a config. Let me do that:
+[0m$ [0mnpm install -D @playwright/test
+added 1 package, and audited 460 packages in 2s
+
+73 packages are looking for funding
+  run `npm fund` for details
+
+found 0 vulnerabilities
+[0m
+Now let me create the Playwright configuration:
+[0m← [0mWrite playwright.config.ts
+Wrote file successfully.
+[0m
