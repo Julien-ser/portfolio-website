@@ -4,6 +4,7 @@ import { useEffect, useReducer, useRef, useMemo } from 'react';
 import { Terminal as XTerm } from '@xterm/xterm';
 import { FitAddon } from '@xterm/addon-fit';
 import '@xterm/xterm/css/xterm.css';
+import './terminal-effects.css';
 import { Trie, createCompletionTrie } from '../../lib/terminal/trie';
 
 interface XTerminalProps {
@@ -98,9 +99,9 @@ export default function XTerminal({ prompt = '$ ', onCommand }: XTerminalProps) 
     const term = new XTerm({
       cursorBlink: true,
       theme: {
-        background: '#1e1e1e',
-        foreground: '#f0f0f0',
-        cursor: '#ffffff',
+        background: '#000000',
+        foreground: '#33ff00',
+        cursor: '#33ff00',
       },
       fontSize: 14,
       fontFamily: 'monospace',
@@ -113,6 +114,17 @@ export default function XTerminal({ prompt = '$ ', onCommand }: XTerminalProps) 
 
     term.open(terminalRef.current);
     fit.fit();
+
+    // Helper function for typing animation
+    const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
+    
+    const typeWriteln = async (t: XTerm, text: string, charDelay = 5) => {
+      for (let i = 0; i < text.length; i++) {
+        t.write(text[i]);
+        await delay(charDelay);
+      }
+      t.write('\r\n');
+    };
 
     term.writeln('Welcome to the portfolio terminal. Type "help" for available commands.');
     term.write(prompt);
@@ -129,10 +141,19 @@ export default function XTerminal({ prompt = '$ ', onCommand }: XTerminalProps) 
             if (result instanceof Promise) {
               const output = await result;
               if (typeof output === 'string') {
-                term.writeln(output);
+                // Use typing animation for text output (skip if contains ANSI escapes)
+                if (output.includes('\x1b')) {
+                  term.writeln(output);
+                } else {
+                  await typeWriteln(term, output);
+                }
               }
             } else if (typeof result === 'string') {
-              term.writeln(result);
+              if (result.includes('\x1b')) {
+                term.writeln(result);
+              } else {
+                await typeWriteln(term, result);
+              }
             }
           } catch (error) {
             term.writeln(`Error: ${error instanceof Error ? error.message : 'Unknown error'}`);
@@ -236,5 +257,9 @@ export default function XTerminal({ prompt = '$ ', onCommand }: XTerminalProps) 
     term.write(`${prompt}${line}`);
   };
 
-  return <div ref={terminalRef} style={{ width: '100%', height: '100%' }} />;
+  return (
+    <div className="relative w-full h-full terminal-crt overflow-hidden">
+      <div ref={terminalRef} className="terminal-glow w-full h-full" />
+    </div>
+  );
 }

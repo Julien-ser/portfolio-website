@@ -1,0 +1,93 @@
+/* Terminal Visual Effects */
+
+/* CRT Scanlines overlay */
+.terminal-crt::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Phosphor glow effect */
+.terminal-glow {
+  text-shadow: 
+    0 0 5px rgba(0, 255, 0, 0.5),
+    0 0 10px rgba(0, 255, 0, 0.3),
+    0 0 15px rgba(0, 255, 0, 0.2);
+}
+
+/* Additional CRT screen curvature effect */
+.terminal-crt::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 0%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+  pointer-events: none;
+  z-index: 11;
+}
+
+/* Flicker animation for CRT effect */
+@keyframes flicker {
+  0% { opacity: 0.97; }
+  5% { opacity: 0.95; }
+  10% { opacity: 0.9; }
+  15% { opacity: 0.95; }
+  20% { opacity: 0.99; }
+  50% { opacity: 0.95; }
+  80% { opacity: 0.9; }
+  100% { opacity: 0.97; }
+}
+
+.terminal-crt {
+  animation: flicker 0.15s infinite;
+}
+
+/* Typing animation for command output */
+@keyframes typeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-typing {
+  animation: typeIn 0.05s ease-out forwards;
+}
+
+/* Cursor blink enhancement to simulate phosphor persistence */
+.xterm-cursor {
+  animation: cursor-blink 1s step-end infinite;
+  box-shadow: 0 0 10px currentColor;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Subtle screen grain texture */
+.terminal-crt .xterm-screen {
+  filter: contrast(1.1) brightness(1.05);
+}
