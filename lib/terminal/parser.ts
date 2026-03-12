@@ -63,7 +63,7 @@ export class CommandParser {
   }
 
   getCommands(): string[] {
-    return this.commands;
+    return [...this.commands];
   }
 
   isCommand(input: string): boolean {

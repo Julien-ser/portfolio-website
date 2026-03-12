@@ -1,1 +1,23 @@
-export const revalidate = 0;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom CRT scanline effect */
+@layer utilities {
+  .scanlines {
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0px,
+      transparent 2px,
+      rgba(0, 0, 0, 0.1) 2px,
+      rgba(0, 0, 0, 0.1) 4px
+    );
+    pointer-events: none;
+  }
+
+  .phosphor-glow {
+    text-shadow: 0 0 5px currentColor,
+                 0 0 10px currentColor,
+                 0 0 15px currentColor;
+  }
+}
