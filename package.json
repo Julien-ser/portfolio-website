@@ -1,0 +1,57 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "This is a template for new projects created via `wiggum_master.sh create`.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Julien-ser/portfolio-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Julien-ser/portfolio-website/issues"
+  },
+  "homepage": "https://github.com/Julien-ser/portfolio-website#readme",
+  "dependencies": {
+    "@langchain/openai": "^1.2.13",
+    "@types/node": "^25.4.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "autoprefixer": "^10.4.27",
+    "axios": "^1.13.6",
+    "langchain": "^1.2.31",
+    "next": "^16.1.6",
+    "playwright": "^1.58.2",
+    "postcss": "^8.5.8",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-draggable": "^4.5.0",
+    "simple-oauth2": "^5.1.0",
+    "tailwindcss": "^4.2.1",
+    "twitter-api-v2": "^1.29.0",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/simple-oauth2": "^5.0.8",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.9.3"
+  }
+}

@@ -1,0 +1,44 @@
+# Environment
+.env
+.env.local
+.env.*.local
+.env.production.local
+
+# Node modules
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+next-env.d.ts
+
+# Build outputs
+.next/
+out/
+build/
+dist/
+
+# Cache
+.cache/
+.eslintcache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package lock (use lockfile, don't commit)
+*.lock
+
+# Large binary files (native modules that exceed GitHub limits)
+*.node
+*.so
+*.dylib
+*.wasm
+
+/node_modules

@@ -1,0 +1,54 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Tell me about yourself",
+      "answer": "I'm a passionate software developer with experience in building web applications, working with technologies like React, Node.js, Python, and cloud services. I love solving complex problems and creating intuitive user experiences."
+    },
+    {
+      "id": 2,
+      "question": "What are your greatest strengths?",
+      "answer": "My greatest strengths include strong problem-solving skills, adaptability to new technologies, attention to detail, and the ability to communicate complex technical concepts to non-technical stakeholders."
+    },
+    {
+      "id": 3,
+      "question": "What are your weaknesses?",
+      "answer": "I sometimes get too invested in perfecting my code, which can lead to spending extra time on projects. I've learned to balance quality with deadlines by setting realistic goals and seeking peer reviews."
+    },
+    {
+      "id": 4,
+      "question": "Why do you want to work here?",
+      "answer": "I'm impressed by your company's innovative approach to [industry]. Your commitment to [specific value or project] aligns with my own professional values, and I'm excited about the opportunity to contribute to meaningful work."
+    },
+    {
+      "id": 5,
+      "question": "Where do you see yourself in 5 years?",
+      "answer": "In 5 years, I see myself growing into a leadership role where I can mentor others while continuing to work on cutting-edge projects. I'm committed to continuous learning and staying at the forefront of technology."
+    },
+    {
+      "id": 6,
+      "question": "Describe a challenging project you worked on",
+      "answer": "One challenging project was building a real-time collaborative editor. We had to handle concurrent edits, conflict resolution, and maintain sub-second latency. I implemented operational transformation algorithms and used Redis for state synchronization, which taught me a lot about distributed systems."
+    },
+    {
+      "id": 7,
+      "question": "How do you handle conflict in a team?",
+      "answer": "I believe in open, respectful communication. When conflicts arise, I try to understand all perspectives, find common ground, and focus on the shared goal. I'm not afraid to share my viewpoint but always with evidence and empathy."
+    },
+    {
+      "id": 8,
+      "question": "What is your greatest professional achievement?",
+      "answer": "My greatest professional achievement was developing an AI-powered code review assistant that integrates with GitHub. It provides intelligent feedback on PRs and has helped improve code quality across multiple teams. Seeing it being used by developers daily is incredibly rewarding."
+    },
+    {
+      "id": 9,
+      "question": "How do you stay updated with technology trends?",
+      "answer": "I stay updated by reading tech blogs, following industry leaders on social media, contributing to open source, experimenting with side projects, and attending conferences and meetups. Continuous learning is a habit I prioritize."
+    },
+    {
+      "id": 10,
+      "question": "Explain a complex technical concept simply",
+      "answer": "Think of APIs like waiters in a restaurant. You (the client) give your order (request) to the waiter (API), who brings it to the kitchen (server). The kitchen prepares your food (processes the request) and the waiter brings back your meal (response). The API standardizes how different systems communicate, just like a waiter follows a specific process to serve customers."
+    }
+  ]
+}

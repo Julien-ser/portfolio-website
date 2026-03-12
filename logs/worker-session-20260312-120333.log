@@ -1,0 +1,27 @@
+🚀 Starting Wiggum Worker for: portfolio-website
+📍 Project Path: /home/julien/Desktop/Free-Wiggum-opencode/projects/portfolio-website
+⏰ Started at: Thu Mar 12 12:03:33 PM EDT 2026
+⚡ Token Budget: 64000
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━════
+
+📍 Iteration 42 at Thu Mar 12 12:03:33 PM EDT 2026...
+🤖 OpenCode processing: Create Twitter/X API v2 client in `lib/api/twitter.ts` using `twitter-api-v2` to fetch recent tweets for `social` process
+[0m
+> build · stepfun/step-3.5-flash:free
+[0m
+I'll create the Twitter/X API v2 client to fetch recent tweets for the social process. Let me first check the project structure and existing API clients to match the coding patterns.
+[0m→ [0mRead lib/api
+[0m→ [0mRead package.json
+[0m→ [0mRead lib/api/duckduckgo.ts
+[0m→ [0mRead lib/api/linkedin.ts
+📝 Log saved: logs/iteration-42.md
+📊 Token Usage: 2500 / Session: 2500 / 64000
+✅ Changes committed
+remote: error: Trace: c6963a53149c26f5ebd6474d7daab30c1b0aa08218d61a0dc72bd83a71042290        
+remote: error: See https://gh.io/lfs for more information.        
+remote: error: File node_modules/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node is 112.45 MB; this exceeds GitHub's file size limit of 100.00 MB        
+remote: error: File node_modules/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node is 112.04 MB; this exceeds GitHub's file size limit of 100.00 MB        
+remote: error: GH001: Large files detected. You may want to try Git Large File Storage - https://git-lfs.github.com.        
+To https://github.com/Julien-ser/portfolio-website.git
+ ! [remote rejected]   main -> main (pre-receive hook declined)
+error: failed to push some refs to 'https://github.com/Julien-ser/portfolio-website.git'

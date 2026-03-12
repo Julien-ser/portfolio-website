@@ -1,0 +1,203 @@
+.process-window {
+  position: absolute;
+  background: #2d2d2d;
+  border: 1px solid #444;
+  border-radius: 6px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-width: 400px;
+  min-height: 300px;
+}
+
+.process-window.active {
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.6);
+  border-color: #5a5a5a;
+}
+
+.process-window.inactive {
+  opacity: 0.85;
+}
+
+.window-title-bar {
+  height: 36px;
+  background: linear-gradient(180deg, #3a3a3a 0%, #2d2d2d 100%);
+  border-bottom: 1px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  user-select: none;
+  cursor: default;
+}
+
+.window-title {
+  color: #e0e0e0;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.window-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.window-control {
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #aaa;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.window-control:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+
+.window-control.close:hover {
+  background: #e81123;
+  color: #fff;
+}
+
+.window-control.minimize span {
+  display: block;
+  height: 1px;
+  background: currentColor;
+  width: 10px;
+}
+
+.window-control.maximize span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid currentColor;
+  border-radius: 1px;
+}
+
+.window-control.maximize span::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1px solid currentColor;
+  border-radius: 1px;
+  top: -1px;
+  right: -1px;
+}
+
+.window-content {
+  flex: 1;
+  overflow: auto;
+  background: #1e1e1e;
+  position: relative;
+}
+
+/* Resize handles */
+.resize-handle {
+  position: absolute;
+  z-index: 100;
+}
+
+.resize-handle-n,
+.resize-handle-s {
+  left: 0;
+  right: 0;
+  height: 4px;
+  cursor: ns-resize;
+}
+
+.resize-handle-n {
+  top: 0;
+}
+
+.resize-handle-s {
+  bottom: 0;
+}
+
+.resize-handle-e,
+.resize-handle-w {
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  cursor: ew-resize;
+}
+
+.resize-handle-w {
+  left: 0;
+}
+
+.resize-handle-e {
+  right: 0;
+}
+
+.resize-handle-ne,
+.resize-handle-nw,
+.resize-handle-se,
+.resize-handle-sw {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+}
+
+.resize-handle-nw {
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+}
+
+.resize-handle-ne {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+}
+
+.resize-handle-sw {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+}
+
+.resize-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+/* CRT scanline effect for window content (optional aesthetic) */
+.window-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.3;
+}
+
+.window-content > * {
+  position: relative;
+  z-index: 0;
+}
